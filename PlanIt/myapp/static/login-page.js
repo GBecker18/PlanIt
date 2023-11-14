@@ -9,11 +9,11 @@ loginButton.addEventListener("click", (e) => {
 
     if (username === "user" && password === "pass") {
         //alert("You have successfully logged in.");
-	location.open(window.location.href = (window.location.href).replace("login-page.html", "homePageEmployee.html")); //redirects to employee version of home page
+	location.open(window.location.href = (window.location.href).replace("login-page.html", "home-page-employee.html")); //redirects to employee version of home page
         location.reload();
     } else if (username === "admin" && password === "pass") {
         //alert("You have successfully logged in.");
-	location.open(window.location.href = (window.location.href).replace("login-page.html", "homePageManager.html")); //redirects to manager version of home page
+	location.open(window.location.href = (window.location.href).replace("login-page.html", "home-page-manager.html")); //redirects to manager version of home page
         location.reload();
     } else {
         loginErrorMsg.style.opacity = 1;

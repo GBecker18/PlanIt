@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,18 +7,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  <link rel="stylesheet" href="login-page.css">
-  <script defer src="login-page.js"></script>
+  <link rel="stylesheet" href="static/login-page.css">
+  <script defer src="static/login-page.js"></script>
 </head>
 
 <body>
   <main id="main-holder">
-    <img src="image/IMG_1359.jpg" alt="Planit_logo" width="300px">
+    <img src="static/IMG_1359.jpg" alt="Planit_logo" width="300px">
     
     <div id="login-error-msg-holder">
       <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
     </div>
     
+
+    <form method="POST" autocomplete="off">
+      {% csrf_token %} {{form.as_p}}
+
+      <input class="btn btn-primary" type="submit" value="Submit" />
+      <a href="{% url 'home' %}"></a>
+      <br />
+      <br />
+      <p><a href="{% url 'forgotPass' %}" target="_blank"> Forgot Password</a>?</p>
+      <p>Dont have an account? <a href="{% url 'register' %}"> Register </a></p>
+
+
+    <!--
     <form id="login-form">
       <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
       <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
@@ -24,7 +39,7 @@
     </form>
       <p><a href="forgotPass.html" target="_blank"> Forgot Password</a>?</p>
       <p>Don't have an account?<a href="register.html" target="_blank"> Register here</a></p>
-  
+  -->
   </main>
 </body>
 

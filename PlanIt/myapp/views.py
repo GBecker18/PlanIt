@@ -9,7 +9,7 @@ def login_home(request):
     return render(request, 'home-page-login.html')
 
 def employee_home(request):
-    return render(request, 'home-page-employee.html')
+    return render(request, 'homePageEmployee.html')
 
 def profile(request): 
     return render(request, 'staticUserProfile.html')
@@ -36,7 +36,7 @@ def login(request):
             return redirect("home")
         
     context = { 'form': form}
-    return render(request, 'login-page.html', context=context)
+    return render(request, 'loginPage.html', context=context)
 
 def register(request):
    
@@ -55,4 +55,7 @@ def register(request):
     return render(request, "register.html", context=context)
 
 def timeOffForm(request):
-    return render(request, "time-off-request-form.html")
+    return render(request, "timeOffRequestForm.html")
+
+def forgotPass(request):
+    return render(request, "forgotPass.html")
