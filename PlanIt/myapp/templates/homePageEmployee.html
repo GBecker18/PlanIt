@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="calendar.css">
+<link rel="stylesheet" href="static/calendar.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
@@ -29,23 +30,23 @@ img {
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="navBar()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="homePageEmployee.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="timeOffRequestForm.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Time Off Request</a>
+    <a href="{% url 'home' %}" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="{% url 'timeOffForm' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Time Off Request</a>
     <a href="payPeriod.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Pay</a>
-    <a href="staticUserProfile.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">Profile</a>
+    <a href="{% url 'profile' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">Profile</a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="dropDown" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="timeOffRequestForm.html" class="w3-bar-item w3-button w3-padding-large">Time Off</a>
+    <a href="{% url 'timeOffForm' %}" class="w3-bar-item w3-button w3-padding-large">Time Off</a>
     <a href="payPeriod.html" class="w3-bar-item w3-button w3-padding-large">Pay</a>
-    <a href="staticUserProfile.html" class="w3-bar-item w3-button w3-padding-large">Profile</a>
+    <a href="{% url 'profile' %}" class="w3-bar-item w3-button w3-padding-large">Profile</a>
   </div>
 </div>
 
 <!-- Header -->
 <header class="w3-container w3-black w3-center" style="padding:128px 16px">
-  <img src="image/logo.png" alt="logo" class="center">
+  <img src="static/logo.png" alt="logo" class="center">
   <h1 class="w3-margin w3-jumbo">PlanIt</h1>
 </header>
 
@@ -98,9 +99,9 @@ img {
 
                 <div class="row header-title">
 
-                  <div class="header-text">
-                    <h3 id="month-name">October</h3>
-                    <h5 id="todayDayName">Today is Monday 23 Oct</h5>
+                  <div class="header-text"> 
+                    <h3 id="month-name">November 13</h3>
+                    <h5 id="todayDayName">Today is Monday 13 Nov</h5>
                   </div>
 
                 </div>
@@ -152,7 +153,7 @@ img {
     <script>
       $(".button-collapse").sideNav();
     </script>
-    <script src="calendar.js"></script>
+    <script src="static/calendar.js"></script>
   </body>
 </html>
   </div>

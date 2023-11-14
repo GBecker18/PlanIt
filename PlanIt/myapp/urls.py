@@ -9,7 +9,7 @@ urlpatterns = [
     path('profile', views.profile, name='profile'),
     path('login', views.login, name='login'),
     path('register', views.register, name='register'),
-    path ('timeOffForm', views.timeOffForm, name='timeOffForm'),
-
+    path('timeOffForm', views.timeOffForm, name='timeOffForm'),
+    path('forgotPass', views.forgotPass, name= 'forgotPass')
     # path("", views.index, name="index"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
