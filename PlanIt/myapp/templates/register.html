@@ -1,40 +1,52 @@
-{%load static %}
-
-<html>
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
   <head>
-    <title>Plantit| Register</title>
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://bootswatch.com/5/morph/bootstrap.min.css"
-    />
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'css/style.css' %}"
-    />
-  </head>
-
-  <br />
-
-  <div class="container bg-white shadow-md p-5" style="width: 500px">
-    <h1>Register</h1>
-
-    <br />
-
-    <form method="POST" autocomplete="off">
-      {% csrf_token %} {{form.as_p}}
-
-      <input class="btn btn-primary" type="submit" value="Submit" />
-
-      <br />
-      <br />
-
-      <p>Already have an account? <a href="{% url 'login' %}"> Login </a></p>
-    </form>
+    <meta charset="UTF-8">
+    <title> PlanIt Registration </title>
+    <link rel="stylesheet" href="register-form.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" required>
+          </div>
+          
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="text" placeholder="Enter your password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="text" placeholder="Confirm your password" required>
+          </div>
+        </div>
+        <br>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+        <br>
+        <div class="container-signin">
+                <p>Already have an account?  <a href="home-page-login.html">Sign in</a></p>
+            </div>
+            </div>
+      </form>
+    </div>
   </div>
 
-  <br />
+</body>
 </html>

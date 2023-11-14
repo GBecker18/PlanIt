@@ -1,5 +1,3 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +8,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="static/login-page.css">
+<link rel="stylesheet" href="login-page.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
@@ -30,17 +28,17 @@ img {
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="navBar()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="{% url 'home' %}" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="{% url 'timeOffForm' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Time Off Request</a>
-    <a href="{% url '' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Pay</a>
-    <a href="{% url 'profile' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">Profile</a>
+    <a href="homePageEmployee.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="timeOffRequestForm.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Time Off Request</a>
+    <a href="payPeriod.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Pay</a>
+    <a href="staticUserProfile.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">Profile</a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="dropDown" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="{% url 'timeOffForm' %}" class="w3-bar-item w3-button w3-padding-large">Time Off</a>
-    <a href="{% url 'home' %}" class="w3-bar-item w3-button w3-padding-large">Pay</a>
-    <a href="{% url 'profile' %}" class="w3-bar-item w3-button w3-padding-large">Profile</a>
+    <a href="timeOffRequestForm.html" class="w3-bar-item w3-button w3-padding-large">Time Off</a>
+    <a href="payPeriod.html" class="w3-bar-item w3-button w3-padding-large">Pay</a>
+    <a href="staticUserProfile.html" class="w3-bar-item w3-button w3-padding-large">Profile</a>
   </div>
 </div>
 
@@ -52,7 +50,7 @@ img {
   <option value="emergency">Emergency</option>
   <option value="other">Other</option>
 </select>
-<a href="{% url 'timeOffForm' %}" class="w3-button w3-blue w3-padding-large w3-large w3-margin-top">Submit</a>
+<a href="time-off-request-form.html" class="w3-button w3-blue w3-padding-large w3-large w3-margin-top">Submit</a>
 
 <script>
 // unhide a text entry box when other option is selected
